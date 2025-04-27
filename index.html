@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Red Social</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+
+  <!-- Menú lateral -->
+  <aside class="sidebar">
+    <div class="logo">MiRed</div>
+    <nav class="menu">
+      <a href="#"><i class="bi bi-house-door-fill"></i> Inicio</a>
+      <a href="#"><i class="bi bi-people-fill"></i> Amigos</a>
+      <a href="#"><i class="bi bi-chat-dots-fill"></i> Mensajes</a>
+      <a href="#"><i class="bi bi-bell-fill"></i> Notificaciones</a>
+      <a href="#"><i class="bi bi-person-fill"></i> Perfil</a>
+      <button onclick="logout()" class="logout-btn"><i class="bi bi-box-arrow-right"></i> Cerrar sesión</button>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <div id="session-warning" class="warning hidden">
+      <p>Por favor inicia sesión para seguir usando la app.</p>
+      <button onclick="login()">Iniciar sesión</button>
+    </div>
+
+    <div class="post-creator">
+      <textarea id="post-text" placeholder="¿Qué estás pensando?"></textarea>
+      <input type="file" id="post-media" accept="image/*,video/*">
+      <button id="post-submit">Publicar</button>
+    </div>
+
+    <div class="posts-list"></div>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
