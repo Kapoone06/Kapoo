@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Iniciar Sesión / Crear Cuenta</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-container">
+    <h1>Bienvenido</h1>
+
+    <input type="text" id="user" placeholder="Usuario">
+    <input type="password" id="pass" placeholder="Contraseña">
+
+    <div class="login-buttons">
+      <button onclick="startSession()">Iniciar Sesión</button>
+      <button onclick="createAccount()">Crear Cuenta</button>
+    </div>
+
+    <a href="index.html" class="back-link">Volver</a>
+  </div>
+
+  <script>
+    function startSession() {
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "index.html";
+    }
+
+    function createAccount() {
+      alert("Cuenta creada exitosamente (modo demostración)");
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
